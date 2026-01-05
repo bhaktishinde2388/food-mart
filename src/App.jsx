@@ -1,16 +1,16 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-import Home from './views/Home/Home.jsx'
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import Home from "./views/Home/Home.jsx";
+import { CartProvider } from "./context/CartContext.jsx";
 
-
-
-function App() {
+const App = () => {
   return (
-    <>
+    <CartProvider>
+      <Navbar />
+      <Home />
+      <Footer />
+    </CartProvider>
+  );
+};
 
-<Home/>
-    </>
-  )
-}
-
-export default App
+export default App;
