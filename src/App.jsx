@@ -1,8 +1,9 @@
 import React from 'react'
+import logo from "./assets/images/logo.png"
 
 function App() {
   return (
-    <div>food mart</div>
+    <img src={logo} alt="LOGO" />
   )
 }
 
