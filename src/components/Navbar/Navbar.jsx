@@ -8,58 +8,58 @@ import searchIcon from "../../assets/icons/search-interface-symbol.png";
 
 function Navbar() {
   return (
-    // logo.................
-    <div className="flex items-center justify-between px-6 py-3 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">  
-      <img src={logo} alt="LOGO" className="h-[45px] cursor-pointer" />
+    <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-6 py-3 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
 
-    {/* search bar */}
-   
- <div className="flex items-center bg-gray-100 px-3 py-2 rounded-full w-121 gap-15">
-    <div>
-        <select>
+      {/* Logo */}
+      <div className="flex items-center justify-between w-full md:w-auto">
+        <img src={logo} alt="LOGO" className="h-[45px] cursor-pointer" />
+
+        {/* Hamburger menu for mobile */}
+        <div className="md:hidden flex items-center gap-4">
+          <img src={userIcon} alt="user" className="h-6 w-6" />
+          <img src={likeIcon} alt="like" className="h-6 w-6" />
+          <img src={addToCartIcon} alt="cart" className="h-6 w-6" />
+        </div>
+      </div>
+
+      {/* Search bar */}
+      <div className="flex items-center bg-gray-100 px-3 py-2 rounded-full w-full md:w-[500px] mt-3 md:mt-0 gap-3">
+        <select className="bg-transparent outline-none text-sm cursor-pointer">
           <option value="All">All Categories</option>
           <option value="Groceries">Groceries</option>
           <option value="Drinks">Drinks</option>
           <option value="Chocolates">Chocolates</option>
         </select>
-     </div>
- 
 
-    <div>
         <input
           type="text"
           placeholder="Search products..."
           className="bg-transparent outline-none w-full text-sm"
-          onChange={(e) => onSearch(e.target.value)}
         />
-        </div>
 
-     <div>
-        <img src={searchIcon} alt="search" className="h-4 mr-2 opacity-60" />
-    </div>  
+        <img src={searchIcon} alt="search" className="h-4 opacity-60" />
       </div>
 
-      <div><h1>Apply for store <br></br><b style={{fontSize:"20px"}}>partner</b></h1></div>
+      <div className="hidden md:flex items-center gap-6">
+  <div className="text-right">
+    <p className="text-sm">Apply for store</p>
+    <b className="text-lg">Partner</b>
+  </div>
 
-{/* icons...... */}
-      <div className="flex items-center gap-5">        
-        <div className="p-[10px] bg-[#e8e6e6] rounded-full cursor-pointer">
-          <img src={userIcon} alt="user" className="h-[21px] w-[21px]" />
-        </div>
+  <div className="flex items-center gap-3 p-2 rounded-full cursor-pointer">
+    <img src={addToCartIcon} alt="cart" className="h-6 w-6 block" />
+    <span className="hidden md:inline">Your Cart $1290</span>
+  </div>
 
-        <div className="p-[10px] bg-[#e8e6e6] rounded-full cursor-pointer">
-          <img src={likeIcon} alt="like" className="h-[21px] w-[21px]" />
-        </div>
+  <div className="p-2 bg-gray-100 rounded-full cursor-pointer">
+    <img src={userIcon} alt="user" className="h-6 w-6" />
+  </div>
 
-        <div className="p-[10px] bg-[#e8e6e6] rounded-full cursor-pointer">
-          <img src={addToCartIcon} alt="add to cart" className="h-[21px] w-[21px]" />
-        </div>
+  <div className="p-2 bg-gray-100 rounded-full cursor-pointer">
+    <img src={likeIcon} alt="like" className="h-6 w-6" />
+  </div>
+</div>
 
-        <div className="p-[10px] bg-[#e8e6e6] rounded-full cursor-pointer">
-          <img src={searchIcon} alt="search" className="h-[21px] w-[21px]" />
-        </div>
-
-      </div>
     </div>
   );
 }
