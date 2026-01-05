@@ -1,9 +1,14 @@
 import React from 'react'
-import logo from "./assets/images/logo.png"
+import Navbar from './components/Navbar/Navbar'
+
+
 
 function App() {
   return (
-    <img src={logo} alt="LOGO" />
+    <>
+    <Navbar/>
+ <h1>hii</h1>
+    </>
   )
 }
 
