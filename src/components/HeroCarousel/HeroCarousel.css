@@ -1,0 +1,42 @@
+.hero-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 45%;
+}
+
+.hero-text .subtitle {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.hero-text h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.hero-text button {
+  padding: 12px 24px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 260px;
+  transform: rotate(-12deg);
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(-12deg); }
+  50% { transform: translateY(-12px) rotate(-12deg); }
+  100% { transform: translateY(0) rotate(-12deg); }
+}
