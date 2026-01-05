@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
+import Home from './views/Home/Home.jsx'
 
 
 
 function App() {
   return (
     <>
-    <Navbar/>
- <h1>hii</h1>
+
+<Home/>
     </>
   )
 }
